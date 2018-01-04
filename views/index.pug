@@ -1,0 +1,10 @@
+include includes/header.pug
+div(class="container")
+  h1= title
+  div(class="row")
+    each d in data
+      ul
+        li
+          a(href="/user/" + d.id)= d.firstName + ' ' + d.lastName
+   
+include includes/footer.pug

@@ -1,0 +1,23 @@
+include includes/header.pug
+.container-fluid
+  h1 Users
+  form.navbar-form.navbar-left(action='/add', method='post')
+    .form-group
+      label  First Name:
+      br
+      input.form-control(type='text', name='firstName')
+    div
+      br
+      label  Last Name:
+      br
+      input.form-control(type='text', name='lastName')
+    div
+      br
+      button.btn.btn-default(type='submit') Submit
+      br
+      br  
+ 
+    
+        
+
+include includes/footer.pug

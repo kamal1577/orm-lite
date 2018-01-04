@@ -1,0 +1,22 @@
+h1{
+  color : green;
+}
+
+h2{
+  color : black;
+}
+
+body{
+  background-color : red;
+  padding-left: 28px;
+}
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
