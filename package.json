@@ -6,14 +6,11 @@
     "bcrypt": "^1.0.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
-    "cli": "^3.2.0",
     "express": "^4.16.2",
     "path": "^0.12.7",
     "pg": "^7.4.0",
     "pug": "^2.0.0-rc.4",
-    "sequelize": "^4.28.6",
-    "CLI": "^3.2.0",
-    "ORM": "^4.28.1"
+    "sequelize": "^4.32.1"
   },
   "devDependencies": {},
   "scripts": {

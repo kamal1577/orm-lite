@@ -1,14 +1,15 @@
 var fs        = require('fs');
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('postgres://postgres:jannat15@localhost/orm');
+// const sequelize = new Sequelize('postgres://postgres:jannat15@localhost/orm');
 
 
 
 class User{
-  constructor(tableName, connString){
+constructor(tableName, connString){
  this.tableName = tableName;
-  this.model = this.createModel(this.tableName);
  this.sequelize = this.initiate(connString);
+ this.model = this.createModel(this.tableName);
+
 
 }
  initiate(connstring){
@@ -16,17 +17,17 @@ class User{
   return new Sequelize(connstring);
 }
 createModel(tableName){
-return sequelize.define('test_user', {
-  firstName: {
-    type: Sequelize.STRING,
-    field: 'first_name' // Will result in an attribute that is firstName when user facing but first_name in the database
-  },
-  lastName: {
-    type: Sequelize.STRING
-  }
-}, {
-  freezeTableName: true // Model tableName will be the same as the model name
-});
+    return this.sequelize.define('test_user', {
+      firstName: {
+        type: Sequelize.STRING,
+        field: 'first_name' // Will result in an attribute that is firstName when user facing but first_name in the database
+      },
+      lastName: {
+        type: Sequelize.STRING
+      }
+    }, {
+      freezeTableName: true // Model tableName will be the same as the model name
+    });
 }
 
 // User.sync({force: true}).then(function () {
